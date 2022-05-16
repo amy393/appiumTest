@@ -6,6 +6,7 @@
   "scripts": {
     "test1": "echo \"I don't know what he want to do\"",
     "go":"mocha src/test/ios-basic-interactions.test.js",
+    "goScroll":"mocha src/test/ios-basic-interactions-scroll.test.js",
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "mocha": {

@@ -16,9 +16,8 @@ describe('Basic IOS interactions', function () {
     await client.deleteSession();
   });
 
-   it('should click a button that opens an alert', async function () {
-    const element = await client.findElement('accessibility id', 'show alert');
-    await client.elementClick(element.ELEMENT);
-    assert.equal(await client.getAlertText(), 'Cool title\nthis alert is so cool.');
+   it('should scroll a button', async function () {
+    const element = await client.findElement('xpath', '//XCUIElementTypeSlider[@name="AppElem"]');
+    await client.touchScroll(100,0,element.ELEMENT);
   });
 });
